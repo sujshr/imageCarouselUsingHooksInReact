@@ -1,1 +1,94 @@
-/* write down the css for Carousel in this file */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+  font-weight: 600;
+}
+
+#container {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#image {
+  position: relative;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#image > div {
+  margin: 2vh;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.615);
+  border-radius: 8px;
+}
+
+#imgContainer {
+  position: relative;
+  max-height: 60vh;
+  max-width: 60vh;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.arrow {
+  color: white;
+  padding: 3vw;
+  background-color: rgba(0, 0, 0, 0.236);
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  margin: 2vw;
+}
+
+.arrow:hover {
+  transform: scale(1.05);
+  border: 1px solid rgba(255, 217, 0, 0.159);
+}
+
+#title,
+#subtitle {
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.595);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.615);
+  z-index: 2;
+}
+
+#title {
+  top: 10%;
+  font-size: 1.5rem;
+}
+
+#subtitle {
+  font-size: 1rem;
+  bottom: 10%;
+}
+
+@media (max-width: 700px) {
+  #title {
+    top: -35%;
+  }
+  #subtitle {
+    bottom: -35%;
+  }
+}
